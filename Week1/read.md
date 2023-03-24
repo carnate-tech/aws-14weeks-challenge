@@ -33,6 +33,16 @@ Private clouds are built, managed, and owned by a single organization and privat
 Hybrid clouds combine public and private cloud models, allowing companies to leverage public cloud services and maintain the security and compliance  capabilities commonly found in private cloud architectures.
 
 
+***Benifits of Cloud Computing***
 
+1. Flexible and easy to use. User can access the environment any where from the world, just need the internet access.
+2. Pay as you go model. Pay what you have used. It is very cost effective. User can always spin up server with couple of clicks and start the developement of business usecase and start seeing the values quickly.
+3. Secure, cloud service providers are align with most of the compliance requirements, by saying that security is a shared responsibilty. 
 
+cloud has many advantage but we just listed some of them above.
+
+***What is AWS cloud and fundamental services of AWS***
+AWS stands for Amazon Web Service. AWS is the top public cloud service provider.Amazon Web Services (AWS) is the world’s most comprehensive and broadly adopted cloud, offering over 200 fully featured services from data centers globally. Millions of customers—including the fastest-growing startups, largest enterprises, and leading government agencies—are using AWS to lower costs, become more agile, and innovate faster.
+
+We will discuss fundamental services of AWS in Week 1 challenge.
 
