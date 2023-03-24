@@ -42,6 +42,7 @@ Hybrid clouds combine public and private cloud models, allowing companies to lev
 cloud has many advantage but we just listed some of them above.
 
 ***What is AWS cloud and fundamental services of AWS***
+
 AWS stands for Amazon Web Service. AWS is the top public cloud service provider.Amazon Web Services (AWS) is the world’s most comprehensive and broadly adopted cloud, offering over 200 fully featured services from data centers globally. Millions of customers—including the fastest-growing startups, largest enterprises, and leading government agencies—are using AWS to lower costs, become more agile, and innovate faster.
 
 We will discuss fundamental services of AWS in Week 1 challenge.
