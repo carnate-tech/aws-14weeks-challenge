@@ -1,7 +1,7 @@
 # Week 1 Challenge 
-**Inspired by Prasad Rao ( LinkedIn Link - https://www.linkedin.com/feed/update/urn:li:activity:7044291636020834304/)
+*** Inspired by Prasad Rao ( LinkedIn Link - https://www.linkedin.com/feed/update/urn:li:activity:7044291636020834304/)
 
-**Challenge Overview
+*** Challenge Overview
 
 In the Week 1 Challange, we will go through the below topic
 
@@ -12,7 +12,7 @@ In the Week 1 Challange, we will go through the below topic
 
 Let's start the discussion.
 
-**What is cloud computing
+***What is cloud computing
 
 Cloud computing is on demand delivery of computing services such as computer servers, storage, databases, networking, software, analytics, and intelligence over the Internet so called cloud.This helped enterprises provision the infrastructure in quick time compare to traditional approach where it took months to build and provision an infra in a data center. It eliminates the need for enterprises to procure, configure, or manage resources themselves, and they only pay for what they use and zero or less administration on the infrastructure.
 
