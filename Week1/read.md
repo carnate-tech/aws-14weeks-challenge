@@ -49,26 +49,56 @@ We will discuss fundamental services of AWS in Week 1 challenge. The week 1 chal
 
 Let's start the workshop step by step.
 
-Step -1: Before start learning AWS, please create a free tier account of AWS. There are lots of material or links available how to create it, you can follow any one them and set it up. One such link is - https://medium.com/@ookiisan/setting-up-aws-free-tier-account-and-billing-alarm-9522c490bb7f
+***`Prerequisites - Environment Set up `***
+
+Before we will go deep dive to workskop, lets create environment set up. This is one time set up and can be used in future challenge.
+
+1. Free account in AWS:
+2. Install VS Code.
+3. Install Terraform.
+4. Install AWS CLI.
+5. Configure aws cli to be used in Terraform.
+
+For each steps, I followed already available videos and share the links below. 
+
+***`Free account set up in AWS `***
+
+create a free tier account of AWS. There are lots of material or links available how to create it, you can follow any one them and set it up. One such link is - https://medium.com/@ookiisan/setting-up-aws-free-tier-account-and-billing-alarm-9522c490bb7f
 
 ***Note:**** 
 
 1. Please **DO NOT** forget to set up billing alram to avoid any surpise bills. Here we assume that user have set up a free account and set up the billing alram.
 2. Set up MFA set up for your root user and create another admin user for the same. See the a very good video how to do the same - https://www.youtube.com/watch?v=OVaYHdYfaH4.
+3.  Create an IAM User to for this workshop. We create an IAM user and already set up the MFA for the same by following above youtbe videos.
 
-Step -2: Create an IAM User to for this workshop. We create an IAM user and already set up the MFA for the same by following above youtbe videos.
+***` Install VSCode locally `***
+ Download link - https://code.visualstudio.com/Download
 
-***Note:***
 
-1. To make this workshop more interesting, I thought of use terraform to build all my resources in AWS. The first thing, I have to configure Terraform in my windows machine. Do not worry, it is super easy. See the youtube video link - https://www.youtube.com/watch?v=ljYzclmsvF4 for the same.
+***`Terraform set up locally `***
+
+To make this workshop more interesting, I thought of use terraform to build all my resources in AWS. The first thing, I have to configure Terraform in my windows machine. Do not worry, it is super easy. See the youtube video link - https://www.youtube.com/watch?v=ljYzclmsvF4 for the same.
 I already did the same, see the screenshot.
 <img width="266" alt="image" src="https://user-images.githubusercontent.com/24868114/227738913-9ee138f2-fffc-4837-b4fc-c85e2dfd2fdd.png">
 
-2. It is important to set up Terraform with AWS so that we can build all our resources in Terraform. For the set up, see the video - https://www.youtube.com/watch?v=XxTcw7UTues. ( If you are looking for VSCODE to use for your IDE, use it. it is a free download and easy to set up tool). I clone my repository to local VSCODE and do all my development locally and then sync to Github repo.
+***`Install AWS CLI `***
 
-<img width="620" alt="image" src="https://user-images.githubusercontent.com/24868114/227739404-f635af43-afae-4938-a65c-a9ae6a61ef8f.png">
+Set up AWS cli in your system, AWS CLI is used to connect different aws services and also it will help you interact different aws services using your access key and token key. To configure AWS CLI in your machine, see the video - https://www.youtube.com/watch?v=u0JyzUGzvJA
 
-3. 
+***` Configure aws cli to be used in Terraform `***
+
+It is important to set up Terraform with AWS so that we can build all our resources in Terraform. For the set up, see the video - https://www.youtube.com/watch?v=XxTcw7UTues. 
+
+If your aws installation is OK, check it by typing the command ***` aws --version `*** to see the version.
+
+<img width="424" alt="image" src="https://user-images.githubusercontent.com/24868114/227740088-26bb5e6f-5af3-4986-a732-ab02a4f7bff0.png">
+
+If you have completed all steps, congrats, you achived the big milestone.
+
+
+
+
+
 
 
 
