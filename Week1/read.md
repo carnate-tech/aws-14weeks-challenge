@@ -45,5 +45,24 @@ cloud has many advantage but we just listed some of them above.
 
 AWS stands for Amazon Web Service. AWS is the top public cloud service provider.Amazon Web Services (AWS) is the world’s most comprehensive and broadly adopted cloud, offering over 200 fully featured services from data centers globally. Millions of customers—including the fastest-growing startups, largest enterprises, and leading government agencies—are using AWS to lower costs, become more agile, and innovate faster.
 
-We will discuss fundamental services of AWS in Week 1 challenge.
+We will discuss fundamental services of AWS in Week 1 challenge. The week 1 challenge is the workshop of AWS - Link - https://catalog.workshops.aws/general-immersionday/en-US
+
+Let's start the workshop step by step.
+
+Step -1: Before start learning AWS, please create a free tier account of AWS. There are lots of material or links available how to create it, you can follow any one them and set it up. One such link is - https://medium.com/@ookiisan/setting-up-aws-free-tier-account-and-billing-alarm-9522c490bb7f
+***Note:**** 
+1. Please **DO NOT** forget to set up billing alram to avoid any surpise bills. Here we assume that user have set up a free account and set up the billing alram.
+2. Set up MFA set up for your root user and create another admin user for the same. See the a very good video how to do the same - https://www.youtube.com/watch?v=OVaYHdYfaH4.
+
+Step -2: Create an IAM User to for this workshop. We create an IAM user and already set up the MFA for the same by following above youtbe videos.
+
+***Note:***
+1. To make this workshop more interesting, I thought of use terraform to build all my resources in AWS. The first thing, I have to configure Terraform in my windows machine. Do not worry, it is super easy. See the youtube video link - https://www.youtube.com/watch?v=ljYzclmsvF4 for the same.
+I already did the same, see the screenshot.
+<img width="266" alt="image" src="https://user-images.githubusercontent.com/24868114/227738913-9ee138f2-fffc-4837-b4fc-c85e2dfd2fdd.png">
+
+2. It is important to set up Terraform with AWS so that we can build all our resources in Terraform. For the set up, see the video - https://www.youtube.com/watch?v=XxTcw7UTues.
+3. 
+
+
 
