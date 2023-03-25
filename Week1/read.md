@@ -95,6 +95,23 @@ If your aws installation is OK, check it by typing the command ***` aws --versio
 
 If you have completed all steps, congrats, you achived the big milestone.
 
+In this basic modules, you can learn various functions of each AWS foundational service.
+
+Basic modules consist of the following agenda:
+
+1. Compute - Amazon EC2
+2. Network - Amazon VPC
+3. Security - AWS IAM
+4. Monitoring - Amazon CloudWatch
+5. Database - Amazon RDS
+6. Storage - Amazon S3, Amazon Elastic File System
+
+We will go through each steps with lab and see its characterstics and functionalites.
+
+
+
+
+
 
 
 
