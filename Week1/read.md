@@ -108,7 +108,10 @@ Basic modules consist of the following agenda:
 
 We will go through each steps with lab and see its characterstics and functionalites.
 
-
+***Note***
+ Before we will go deep dive into different services, have a look on the billing and cost allocation tags - https://catalog.workshops.aws/general-immersionday/en-US/basic-modules/70-cost/introduction-to-cost-management/step-2
+ 
+ 
 
 
 
