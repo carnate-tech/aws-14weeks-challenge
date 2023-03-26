@@ -142,6 +142,69 @@ Ok, lets go and start the lab.
 
 Step -1: Create a Key pair.
 
+We used the below terraform code to create a key pair. The same code block is available in code folder as well.
+
+```
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 3.5.0"
+    }
+  }
+}
+
+# Configure the AWS Provider
+provider "aws" {
+  region = "eu-west-2"
+}
+
+# Create a Key pair
+
+resource "aws_key_pair" "sanjeeb-aws-key-pair" {
+  key_name   = "sanjeeb-aws-key-pair"
+  public_key = tls_private_key.rsa.public_key_openssh
+}
+
+# RSA key of size 4096 bits
+resource "tls_private_key" "rsa" {
+  algorithm = "RSA"
+  rsa_bits  = 4096
+}
+
+# Create a local file
+resource "local_file" "sanjeeb-aws-key-pair" {
+  content  = tls_private_key.rsa.private_key_pem
+  filename = "sanjeeb-aws-key-pair"
+}
+
+```
+
+**`Note:`***
+
+Important Terraform commands.
+1. ***`terraform init `*** - This command is used for initialize the terraform.
+2. ***` terraform fmt `*** -  This command is used for format the terraform code.
+3. ***` terraform validate `*** - This command is used for validate the terraform code.
+4. ***` terraform plan `*** - This command is used to describe the plan. This is highly recommended to run before apply the changes.
+5. ***` terraform apply `*** - If you are statisfy with changes, run this command to apply the changes.
+
+See the sample output:
+
+<img width="421" alt="image" src="https://user-images.githubusercontent.com/24868114/227768696-e55ee581-13bb-4393-b3a0-954e81025cb6.png">
+<img width="435" alt="image" src="https://user-images.githubusercontent.com/24868114/227768713-ad6611ee-d7fb-42e9-aff2-a721b81dfa72.png">
+
+We can see the public key is generated locally.
+
+<img width="187" alt="image" src="https://user-images.githubusercontent.com/24868114/227768723-028a46ba-1c16-4bc9-9663-b9b845b4dffa.png">
+
+The private key is also created in AWS ( to validate go to AWS console -> EC2-> Key pairs and see the keys)
+
+<img width="797" alt="image" src="https://user-images.githubusercontent.com/24868114/227768757-2cfd6e19-6ded-4148-b05f-8db9dfb305f1.png">
+
+If you are able to complete these steps, well done. You are able to create sample terraform and create a key pair from terraform. 
+
+
 
  
  
