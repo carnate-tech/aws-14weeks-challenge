@@ -114,7 +114,35 @@ We will go through each steps with lab and see its characterstics and functional
 ***Note***
  Before we will go deep dive into different services, have a look on the billing and cost allocation tags - https://catalog.workshops.aws/general-immersionday/en-US/basic-modules/70-cost/introduction-to-cost-management/step-2
  
- ***`Compute - AWS EC2`***
+ ***`Compute - AWS EC2:`***
+ 
+ Before discussing AWS EC2 ( EC2 stands for Elastic Cloud Compute), lets focus some time on computing. Running any application for any organization require compute.AWS offers a comprehensive portfolio of compute services  allowing you to develop, deploy, run, and scale your applications and workloads in the world’s most powerful, secure and innovative compute cloud.
+ 
+AWS computing services have the following characteristics:
+
+1. Right compute for your workloads. User can select right compute instance and various compute services as per the requirements.
+2. Accelerate from idea to market. Easy to provision, develop and deploy the applications quickly, flexibly.
+3. Offer built in security. Security is at each level.
+4. Flexibility to optimize costs. User can adopt different computing saving plans to save the cost or use on demand "Pay as you Go model"
+5. Provide compute resource where you need it. 
+
+**What is Amazon EC2:**
+
+Amazon EC2  provides scalable computing capacity in the Amazon Web Services (AWS) Cloud. Using Amazon EC2 eliminates the need to invest in hardware up front, so user can develop and deploy applications faster. User can use Amazon EC2 to launch as many or as few virtual servers as per the need, configure security and networking, and manage storage. Amazon EC2 enables user to scale up or down to handle changes in requirements or spikes in popularity, reducing the need to forecast traffic.
+
+Before we will go to the lab and create our first instance, lets have some understanding on the basic components of EC2.
+
+1. AMI ( Amazon Machine Image): Amazon Machine Image is preconfigured template to launch an EC2 instance with Operating system, tools, applications and more. It is region specific and when user will create EC2, it is require to give or select right AMI ID for that region.
+2. Instance Types: Instance type is the CPU of the instance. Instance type provide the details on compute, storage and memory.There are different Instance families like general-purpose, storage optimized, Compute-optimized. 
+3. Elastic Block Storage (EBS) : EBS is a storage service that is attached to EC2 to store data similar to hard drive. Both EBS and EC2 instance should be in the same AZ.
+4. Key Pair: To connect EC2 instances ( via SSH), key pair is require. This will help user to connect ec2 via putty or any other tools and install and configure different applications.
+5. VPC and its components : Amazon Virtual Private Cloud (Amazon VPC) enables to launch AWS resources into a virtual network that user defined. This virtual network closely resembles a traditional network similar to own data center, with the benefits of using the scalable infrastructure of AWS. We will not go in details of VPC. When user will create an AWS account, a default VPC and its components are already created. We will use default VPC for our lab.
+
+Ok, lets go and start the lab.
+
+Step -1: Create a Key pair.
+
+
  
  
 
