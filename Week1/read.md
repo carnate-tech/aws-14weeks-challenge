@@ -3,12 +3,13 @@
 
 **`Challenge Overview`**
 
-In the Week 1 Challange, we will go through the below topic
+In the Week 1 Challange, we will go through the below topic. We divided this week 1 into multiple days.
 
 1. What is Cloud Computing & Different types of Cloud Deployment models.
 2. Benifits of Cloud Computing
 3. What is AWS cloud and fundamental services of AWS
 
+**WEEK 1 - Day 0**
 
 Let's start the discussion.
 
@@ -93,9 +94,11 @@ If your aws installation is OK, check it by typing the command ***` aws --versio
 
 <img width="424" alt="image" src="https://user-images.githubusercontent.com/24868114/227740088-26bb5e6f-5af3-4986-a732-ab02a4f7bff0.png">
 
-If you have completed all steps, congrats, you achived the big milestone.
+If you have completed all steps, congrats, you achived the big milestone. This completes the Week -1 Day 0. 
 
-In this basic modules, you can learn various functions of each AWS foundational service.
+**Week 1 - Day 1**
+
+For Day -1, we will discuss the basic basic modules and foundational services of AWS.
 
 Basic modules consist of the following agenda:
 
@@ -110,6 +113,8 @@ We will go through each steps with lab and see its characterstics and functional
 
 ***Note***
  Before we will go deep dive into different services, have a look on the billing and cost allocation tags - https://catalog.workshops.aws/general-immersionday/en-US/basic-modules/70-cost/introduction-to-cost-management/step-2
+ 
+ ***`Compute - AWS EC2`***
  
  
 
