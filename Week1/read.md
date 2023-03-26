@@ -204,6 +204,155 @@ The private key is also created in AWS ( to validate go to AWS console -> EC2-> 
 
 If you are able to complete these steps, well done. You are able to create sample terraform and create a key pair from terraform. 
 
+Step -2: Create our Webserver (EC2 instance) 
+
+We will do the below steps in this lab.
+
+1. Create an EC2 instance.
+2. Bootstap Apache/PHP webserver.
+3. Install basic web page
+4. Configure security group so that we can access it via internet.
+
+To make the code from terraform, create user script in the same folder where your main.tf is stored. Give the script name as userdata.tpl.
+
+***`userdata.tpl`***
+```
+#!/bin/sh
+
+# Install a LAMP stack
+amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2
+yum -y install httpd php-mbstring
+
+# Start the web server
+chkconfig httpd on
+systemctl start httpd
+
+# Install the web pages for our lab
+if [ ! -f /var/www/html/immersion-day-app-php7.tar.gz ]; then
+   cd /var/www/html
+   wget https://aws-joozero.s3.ap-northeast-2.amazonaws.com/immersion-day-app-php7.tar.gz  
+   tar xvfz immersion-day-app-php7.tar.gz
+fi
+
+# Install the AWS SDK for PHP
+if [ ! -f /var/www/html/aws.zip ]; then
+   cd /var/www/html
+   mkdir vendor
+   cd vendor
+   wget https://docs.aws.amazon.com/aws-sdk-php/v3/download/aws.zip
+   unzip aws.zip
+fi
+
+# Update existing packages
+yum -y update
+
+```
+
+update the main.tf and added the require details for creating security group, run the user data .
+
+```
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 3.5.0"
+    }
+  }
+}
+
+# Configure the AWS Provider
+provider "aws" {
+  region = "eu-west-2"
+}
+
+# Create a Key pair
+
+resource "aws_key_pair" "sanjeeb-aws-key-pair" {
+  key_name   = "sanjeeb-aws-key-pair"
+  public_key = tls_private_key.rsa.public_key_openssh
+}
+
+# RSA key of size 4096 bits
+resource "tls_private_key" "rsa" {
+  algorithm = "RSA"
+  rsa_bits  = 4096
+}
+
+# Create a local file
+resource "local_file" "sanjeeb-aws-key-pair" {
+  content  = tls_private_key.rsa.private_key_pem
+  filename = "sanjeeb-aws-key-pair"
+}
+
+# Get latest Amazon Linux 2 AMI
+data "aws_ami" "amazon-linux-2" {
+  most_recent = true
+  owners      = ["amazon"]
+  filter {
+    name   = "name"
+    values = ["amzn2-ami-hvm*"]
+  }
+}
+
+
+# Define the security group for the EC2 Instance
+resource "aws_security_group" "aws-sg-webserver" {
+  name        = "aws-sg-webserver"
+  description = "Allow incoming connections"
+  vpc_id      = aws_default_vpc.default.id
+  ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+    description = "Allow incoming HTTP connections"
+  }
+  ingress {
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+    description = "Allow incoming SSH connections (Linux)"
+  }
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  tags = {
+    Name = "Webserver-sg"
+  }
+}
+resource "aws_default_vpc" "default" {
+
+}
+
+resource "aws_instance" "vm-server" {
+  ami                    = data.aws_ami.amazon-linux-2.id
+  instance_type          = "t2.micro"
+  vpc_security_group_ids = [aws_security_group.aws-sg-webserver.id]
+  key_name               = aws_key_pair.sanjeeb-aws-key-pair.key_name
+  user_data              = file("userdata.tpl")
+
+  tags = {
+    Name = "aws-webserver-demo"
+  }
+}
+
+```
+
+After you created this terraform, DO NOT forget to save it and run the terraform the same way like above. To apply the changes type ***`terraform apply `*** if all ok, then this will create your security group, instance, attach the security group to the instance and you can see the webpage as well.
+
+The webpage screenshot is:
+
+<img width="811" alt="image" src="https://user-images.githubusercontent.com/24868114/227772032-6805c655-22ea-4925-8087-65061635a608.png">
+
+If you are able to do this steps so far, Great. This is a great achievments. If you are stuck somewhere, please check your configurations and validate it.
+This is all about Day-1, please ensure you destory your resource to avoid any charges, to do the same run ***`terraform destroy `***. We will rebuilt the environment again.
+
+
+
 
 
  
