@@ -369,6 +369,33 @@ The next concept we are going to discuss is "Auto Scaling".
 
 AWS Auto Scaling makes scaling simple with recommendations that allow you to optimize performance, costs, or balance between them. If you’re already using Amazon EC2 Auto Scaling to dynamically scale your Amazon EC2 instances, you can now combine it with AWS Auto Scaling to scale additional resources for other AWS services. With AWS Auto Scaling, your applications always have the right resources at the right time.
 
+There are three main components to EC2 Auto Scaling on AWS.
+
+ ***`1. Launch Template:`*** A Launch Template is a feature of EC2 Auto Scaling that allows a way to templatize your launch requests. It enables you to store launch parameters so that you do not have to specify them every time you launch an instance. For example, a launch template can contain a specific Amazon Machine Image, instance type, storage, and networking settings that you typically use to launch instances. For each Launch Template, you can create one or more numbered Launch Template Versions. Each version can have different launch parameters.
+
+***`2. Auto Scaling Groups:`*** For auto scaling your EC2 instances are organized into groups so that they can be treated as a logical unit for the purposes of scaling and management. When you create a group, you can specify its minimum, maximum, and desired number of EC2 instances.
+
+***`3. Scaling Policies: `*** A Scaling Policy tells Auto Scaling when and how to scale. Scaling can occur manually, on a schedule, on demand, or you can use Auto Scaling to maintain a specific number of instances.
+
+**NOTE:**
+
+1. Auto Scaling is well suited for applications that have unpredictable demand patterns that can experience hourly, daily, or weekly variability in usage. 
+2. This helps you to manage your cost and eliminate over-provisioning of capacity during times when it is not needed. 
+3. Auto Scaling can also find an unhealthy instance, terminate that instance, and launch a new one based on the scaling plan.
+4. The number of EC2 instances can be scaled in or out as Auto Scaling responds to the metrics you define when creating these groups.
+a) You can specify the minimum number of instances in each Auto Scaling Group, so that your group never goes below this size. (Even if the instances are determined to be unhealthy)
+b)  You can specify the maximum number of instances in each Auto Scaling Group, so that your group never goes above this size.
+c)  You can specify a desired capacity to specify the number of healthy instances your auto scaling group should have at all times. (More information can be found here) 
+d) You can specify scaling policies so that Auto Scaling will modify the desired target capacity mentioned in the previous point. It will launch or terminate instances as demand on your application increases or decreases.
+
+We will perform the below steps in this lab.
+
+1. Creating a Launch Template
+2. Setup an Auto Scaling Group
+3. Configuring Security Groups
+4. Testing the Auto Scaling Group
+5. Terminate the resources.
+
 
 
 
