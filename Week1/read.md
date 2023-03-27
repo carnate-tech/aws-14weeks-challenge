@@ -564,6 +564,7 @@ resource "aws_autoscaling_group" "aws-autoscaling-group" {
 For verification, we can see
 
 Launch Template:
+
 <img width="765" alt="image" src="https://user-images.githubusercontent.com/24868114/228054579-0effc191-112f-4ca8-93c7-e4b83fdfa38b.png">
 
 Auto Scaling group:
