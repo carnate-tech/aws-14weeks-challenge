@@ -396,6 +396,27 @@ We will perform the below steps in this lab.
 4. Testing the Auto Scaling Group
 5. Terminate the resources.
 
+***`Creating a Launch Template`***
+We will use below terraform code for creating a launch template. I am keep updating my terraform main.tf, so you will get the final one in the code folder. for each section ones, you can refer in the blog.
+
+```
+resource "aws_launch_template" "aws-launch-template" {
+  name = "aws-launch-template"
+  image_id = data.aws_ami.amazon-linux-2.id
+  instance_type = "t2.micro"
+  key_name = aws_key_pair.sanjeeb-aws-key-pair.key_name
+  vpc_security_group_ids = [aws_security_group.aws-sg-webserver.id]
+  tag_specifications {
+    resource_type = "instance"
+    tags = {
+      Name = "aws-webserver-demo"
+    }
+  }
+  user_data = file("userdata.tpl")
+}
+
+```
+
 
 
 
