@@ -383,10 +383,10 @@ There are three main components to EC2 Auto Scaling on AWS.
 2. This helps you to manage your cost and eliminate over-provisioning of capacity during times when it is not needed. 
 3. Auto Scaling can also find an unhealthy instance, terminate that instance, and launch a new one based on the scaling plan.
 4. The number of EC2 instances can be scaled in or out as Auto Scaling responds to the metrics you define when creating these groups.
--- You can specify the minimum number of instances in each Auto Scaling Group, so that your group never goes below this size. (Even if the instances are determined to be unhealthy)
--- You can specify the maximum number of instances in each Auto Scaling Group, so that your group never goes above this size.
--- You can specify a desired capacity to specify the number of healthy instances your auto scaling group should have at all times. (More information can be found here)
--- You can specify scaling policies so that Auto Scaling will modify the desired target capacity mentioned in the previous point. It will launch or terminate instances as demand on your application increases or decreases.
+** You can specify the minimum number of instances in each Auto Scaling Group, so that your group never goes below this size. (Even if the instances are determined to be unhealthy)
+** You can specify the maximum number of instances in each Auto Scaling Group, so that your group never goes above this size.
+** You can specify a desired capacity to specify the number of healthy instances your auto scaling group should have at all times. (More information can be found here)
+** You can specify scaling policies so that Auto Scaling will modify the desired target capacity mentioned in the previous point. It will launch or terminate instances as demand on your application increases or decreases.
 
 We will perform the below steps in this lab.
 
