@@ -561,7 +561,20 @@ resource "aws_autoscaling_group" "aws-autoscaling-group" {
 ```
 ***`Note`*** We have NOT create any architectural diagram yet, as I am still doing things step by step, Once we will settle down things, we will create a diagram and put it in the diagram section and I will update the section.
 
+For verification, we can see
 
+Launch Template:
+<img width="765" alt="image" src="https://user-images.githubusercontent.com/24868114/228054579-0effc191-112f-4ca8-93c7-e4b83fdfa38b.png">
+
+Auto Scaling group:
+
+<img width="765" alt="image" src="https://user-images.githubusercontent.com/24868114/228054767-a8b3f84f-f4f3-4ebc-9aa2-1c1e6f05cda0.png">
+
+EC2 instances:
+
+<img width="792" alt="image" src="https://user-images.githubusercontent.com/24868114/228054910-c4b9e179-d086-46c2-8473-eca7332311cb.png">
+
+We will wrap up Day -2 here. Before doing Day -3, do not forget to destory your resources by ***`terraform destroy `*** 
 
 
 
