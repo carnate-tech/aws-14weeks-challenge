@@ -351,6 +351,24 @@ The webpage screenshot is:
 If you are able to do this steps so far, Great. This is a great achievments. If you are stuck somewhere, please check your configurations and validate it.
 This is all about Day-1, please ensure you destory your resource to avoid any charges, to do the same run ***`terraform destroy `***. We will rebuilt the environment again.
 
+**WEEK 1 - Day 2**
+
+***`How to Connect EC2 instance: `***
+
+There are some cases users needs to connect to EC2 instances. Some of the steps are :
+
+1. Using putty and public key, connect EC2 instance (
+ Link -https://www.youtube.com/watch?v=051Jdka8piY 
+ https://catalog.workshops.aws/general-immersionday/en-US/basic-modules/10-ec2/ec2-linux/4-ec2 )
+2. Using SSM manager, connect EC2 instance ( Link - https://catalog.workshops.aws/general-immersionday/en-US/basic-modules/10-ec2/ec2-linux/3-ec2-1)
+3. From EC2 console, we can also direct connect EC2 ( as we have allowed port 80) ( Link -https://catalog.workshops.aws/general-immersionday/en-US/basic-modules/10-ec2/ec2-linux/3-ec2)
+
+The next concept we are going to discuss is "Auto Scaling". 
+
+***`AWS Auto Scaling`*** monitors your applications and automatically adjusts capacity to maintain steady, predictable performance at the lowest possible cost to ensure no down time to application availability. This is very much require to improve your customer experience. Using AWS Auto Scaling, it’s easy to setup application scaling for multiple resources across multiple services in minutes. The service provides a simple, powerful user interface that lets you build scaling plans for resources including Amazon EC2 instances and Spot Fleets, Amazon ECS tasks, Amazon DynamoDB tables and indexes, and Amazon Aurora Replicas.
+
+AWS Auto Scaling makes scaling simple with recommendations that allow you to optimize performance, costs, or balance between them. If you’re already using Amazon EC2 Auto Scaling to dynamically scale your Amazon EC2 instances, you can now combine it with AWS Auto Scaling to scale additional resources for other AWS services. With AWS Auto Scaling, your applications always have the right resources at the right time.
+
 
 
 
