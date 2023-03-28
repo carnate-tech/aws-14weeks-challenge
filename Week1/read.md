@@ -577,5 +577,46 @@ EC2 instances:
 
 We will wrap up Day -2 here. Before doing Day -3, do not forget to destory your resources by ***`terraform destroy `*** 
 
+**WEEK 1 - Day 3**
+
+From last 2 days, we created the below resources via terraform.
+
+1. Create Key pair
+2. Create Security groups for our web server and load balancer
+3. Creating a Launch Template
+4. Setup an Auto Scaling Group
+
+Now we are going to create an application load balancer, associlated the auto scaling group. Amazing. The solution flow will look like below.
+
+**NOTE:** - This diagram is from AWS page ( Link - https://catalog.workshops.aws/general-immersionday/en-US/basic-modules/10-ec2/ec2-auto-scaling/ec2-auto-scaling/2-ec2-as), but we created our resources in London region and used 2 ec2 instances only.
+
+<img width="707" alt="image" src="https://user-images.githubusercontent.com/24868114/228378516-967fb929-7655-4f84-8d80-b85bdea10f88.png">
+
+Before doing the lab, let us understand what is Elastice Load balancer.
+
+***Elastic Load Balancer***
+Elastic Load Balancing automatically distributes your incoming traffic across multiple targets, such as EC2 instances, containers, and IP addresses, in one or more Availability Zones. It monitors the health of its registered targets, and routes traffic only to the healthy targets. Elastic Load Balancing scales your load balancer as your incoming traffic changes over time. It can automatically scale to the vast majority of workloads.
+
+Elastic Load Balancing supports the following load balancers: 
+1. Application Load Balancers
+2. Network Load Balancers
+3. Gateway Load Balancers
+4. Classic Load Balancers
+
+Details on each load balancer is available in AWS documentation - https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html
+
+Here we created a application load balancer.
+***`Application Load Balancer (alb)`***
+An Application Load Balancer functions at the application layer, the seventh layer of the Open Systems Interconnection (OSI) model. After the load balancer receives a request, it evaluates the listener rules in priority order to determine which rule to apply, and then selects a target from the target group for the rule action. You can configure listener rules to route requests to different target groups based on the content of the application traffic. Routing is performed independently for each target group, even when a target is registered with multiple target groups. You can configure the routing algorithm used at the target group level. The default routing algorithm is round robin; alternatively, you can specify the least outstanding requests routing algorithm.
+
+For the lab and understanding, I simplify the terraform and make different modules for our easy understanding.
+
+The Terraform folder structure will look like:
+
+<img width="164" alt="image" src="https://user-images.githubusercontent.com/24868114/228379746-8d4110bc-f37f-49a3-ba4b-6de76e12d5ea.png">
+
+Please refer to code folder to get all code details.
+
+
 
 
