@@ -595,6 +595,7 @@ Now we are going to create an application load balancer, associlated the auto sc
 Before doing the lab, let us understand what is Elastice Load balancer.
 
 ***Elastic Load Balancer***
+
 Elastic Load Balancing automatically distributes your incoming traffic across multiple targets, such as EC2 instances, containers, and IP addresses, in one or more Availability Zones. It monitors the health of its registered targets, and routes traffic only to the healthy targets. Elastic Load Balancing scales your load balancer as your incoming traffic changes over time. It can automatically scale to the vast majority of workloads.
 
 Elastic Load Balancing supports the following load balancers: 
@@ -615,7 +616,12 @@ The Terraform folder structure will look like:
 
 <img width="164" alt="image" src="https://user-images.githubusercontent.com/24868114/228379746-8d4110bc-f37f-49a3-ba4b-6de76e12d5ea.png">
 
-Please refer to code folder to get all code details.
+To check your application is accessible from load balancer or not, take the load balancer URL and access it web browser.
+
+<img width="785" alt="image" src="https://user-images.githubusercontent.com/24868114/228380663-bb849406-68c1-4492-a350-765205f338b3.png">
+
+
+Please refer to code folder to get all code details. This completes our Day -3 of Week -1. If you are follow so far, well done, we learned a lot. Do not forget to destiry your resource via terraform by ***`terraform destory`*** after completing the lab.
 
 
 
