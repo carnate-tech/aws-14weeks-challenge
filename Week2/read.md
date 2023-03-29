@@ -30,3 +30,35 @@ To create a VPC following tasks are involved.
 
 Let's started by the Terraform.
 
+The folder structure of the terraform code is:
+
+<img width="140" alt="image" src="https://user-images.githubusercontent.com/24868114/228669970-7c5facd7-abac-46d7-a043-b37273b49e2d.png">
+
+All the code for VPC is available in Week -2 code folder. Please have a look.
+
+To run the code,
+
+***`Step -1 : terraform init `***
+***`step -2: terraform fmt `***
+***`setp -3: terraform validate `***
+***`step -4: terraform plan `***
+***`step -5 : terraform apply -auto-approve `***
+
+After terraform sucessfully executed, verify whether VPC is created in AWS console or not.
+
+**VPC**
+
+<img width="785" alt="image" src="https://user-images.githubusercontent.com/24868114/228670590-1d2e8118-8cbe-47c6-9b18-a8330d05142d.png">
+
+
+**Subnets**
+<img width="756" alt="image" src="https://user-images.githubusercontent.com/24868114/228670733-a4b3527d-62d8-4e19-bead-5c5fd737182c.png">
+
+Please DO NOT forget to destory your resource vua ***` terraform destroy `***
+
+We will use this VPC script for our upcoming resource and implementations.
+
+
+
+
+
