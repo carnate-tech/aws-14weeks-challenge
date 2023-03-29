@@ -621,7 +621,11 @@ To check your application is accessible from load balancer or not, take the load
 <img width="785" alt="image" src="https://user-images.githubusercontent.com/24868114/228380663-bb849406-68c1-4492-a350-765205f338b3.png">
 
 
-Please refer to code folder to get all code details. This completes our Day -3 of Week -1. If you are follow so far, well done, we learned a lot. Do not forget to destiry your resource via terraform by ***`terraform destory`*** after completing the lab.
+Please refer to code folder to get all code details. This completes our Day -3 of Week -1. If you are follow so far, well done, we learned a lot. Do not forget to destiry your resource via terraform by ***`terraform destory`*** after completing the lab. This complete by Week -1 challenge. 
+
+We will start the Week -2 challenge. Please have a look on my Week -2 challenge folder more details.
+
+
 
 
 
