@@ -39,9 +39,13 @@ All the code for VPC is available in Week -2 code folder. Please have a look.
 To run the code,
 
 ***`Step -1 : terraform init `***
+
 ***`step -2: terraform fmt `***
+
 ***`setp -3: terraform validate `***
+
 ***`step -4: terraform plan `***
+
 ***`step -5 : terraform apply -auto-approve `***
 
 After terraform sucessfully executed, verify whether VPC is created in AWS console or not.
