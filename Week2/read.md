@@ -1,6 +1,6 @@
 # Week 2 Challenge
 
-**`Challenge Overview`**
+**Challenge Overview**
 
 In Week -2 challenge, we will dicuss more on AWS Networking. Networking is one of the most important pillar in Cloud architecture. No suprises, AWS provides the broadest and deepest set of networking services with the highest reliability, most security features, and highest performance in the world. This helps ensure you can run any kind of workload you have in the cloud.
 
@@ -12,7 +12,7 @@ The main characterstics of AWS Networking and content delivery services are:
 
 More details can be found from AWS page (Link - https://aws.amazon.com/products/networking/)
 
-**Week -2 Day 0 **
+**Week -2 Day 0**
 
 The first important component in AWS Networking is VPC (Virtual Private Cloud). Let's discuss more on that.
 
