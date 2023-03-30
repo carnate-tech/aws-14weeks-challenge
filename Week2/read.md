@@ -90,4 +90,5 @@ The overall architecture for the lab is :
 
 
 
+***`Step -1: Create a Lambda function `***
 
