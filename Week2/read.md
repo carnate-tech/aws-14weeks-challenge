@@ -63,6 +63,31 @@ Please DO NOT forget to destory your resource vua ***` terraform destroy `***
 We will use this VPC script for our upcoming resource and implementations.
 
 
+**Week -2 Day 1**
+
+The next concept we are going to discuss is API gateway.
+
+***What is Amazon API Gateway :***
+
+Amazon API Gateway  is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale. APIs act as the "front door" for applications to access data, business logic, or functionality from your backend services. Using API Gateway, you can create RESTful APIs, HTTP APIs, or WebSocket APIs (which enable real-time two-way communication applications). API Gateway supports containerized and serverless workloads, as well as web applications.
+
+API Gateway handles all the tasks involved in accepting and processing up to hundreds of thousands of concurrent API calls, including traffic management, CORS support, authorization and access control, throttling, monitoring, and API version management. API Gateway has no minimum fees or startup costs. You pay for the API calls you receive and the amount of data transferred out and, with the API Gateway tiered pricing model, you can reduce your cost as your API usage scales.
+
+Note - The above details are copied from AWS site ( Link - https://catalog.workshops.aws/general-immersionday/en-US/basic-modules/20-vpc/api-gateway)
+
+We will do the below steps in the lab.
+
+1. Create an API which invokes a lambda function.
+2. Lambda function will calculate the price of a house.
+3. Test the API using API gateway console and postman as well.
+
+
+The overall architecture for the lab is :
+
+<img width="578" alt="image" src="https://user-images.githubusercontent.com/24868114/228931058-b8c4d2d9-5b48-4586-80d6-b154ef020361.png">
+
+( Link - https://catalog.workshops.aws/general-immersionday/en-US/basic-modules/20-vpc/api-gateway)
+
 
 
 
