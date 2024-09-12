@@ -3,7 +3,7 @@
 
 **`Challenge Overview`**
 
-In the Week 1 Challange, we will go through the below topic. We divided this week 1 into multiple days.
+In the Week 1 Challenge, we will go through the below topic. We divided this week 1 into multiple days.
 
 1. What is Cloud Computing & Different types of Cloud Deployment models.
 2. Benifits of Cloud Computing
@@ -34,9 +34,9 @@ Private clouds are built, managed, and owned by a single organization and privat
 Hybrid clouds combine public and private cloud models, allowing companies to leverage public cloud services and maintain the security and compliance  capabilities commonly found in private cloud architectures.
 
 
-***Benifits of Cloud Computing***
+***Benefits of Cloud Computing***
 
-1. Flexible and easy to use. User can access the environment any where from the world, just need the internet access.
+1. Flexible and easy to use. Users can access the environment anywhere in the world, just need to have internet access.
 2. Pay as you go model. Pay what you have used. It is very cost effective. User can always spin up server with couple of clicks and start the developement of business usecase and start seeing the values quickly.
 3. Secure, cloud service providers are align with most of the compliance requirements, by saying that security is a shared responsibilty. 
 
